@@ -7,12 +7,45 @@
     <groupId>org.plugface.demo</groupId>
     <artifactId>plugface-demo</artifactId>
     <packaging>pom</packaging>
-    <version>0.5.0-SNAPSHOT</version>
+    <version>0.5.0</version>
     <modules>
-        <module>wordcountingdemoplugin</module>
-        <module>plugfacedemosdk</module>
-        <module>multipackagedemoplugin</module>
-        <module>plugfacedemoapp</module>
+        <module>demoapp</module>
+        <module>pluginarithmetic</module>
+        <module>pluginstring</module>
+        <module>plugincoordinator</module>
+        <module>appsdk</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.plugface.demo</groupId>
+                <artifactId>plugin-arithmetic</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.plugface.demo</groupId>
+                <artifactId>plugin-string</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.plugface.demo</groupId>
+                <artifactId>app-sdk</artifactId>
+                <version>${version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.plugface</groupId>
+            <artifactId>plugface-core</artifactId>
+            <version>0.6.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+    </dependencies>
 </project>
