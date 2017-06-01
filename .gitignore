@@ -118,3 +118,14 @@
 
                         Test.java
 
+.idea/
+appsdk/app-sdk.iml
+appsdk/target/
+demoapp/demo-app.iml
+demoapp/target/
+plugface-demo.iml
+pluginarithmetic/plugin-arithmetic.iml
+pluginarithmetic/target/
+plugincoordinator/plugin-coordinator.iml
+pluginstring/plugin-string.iml
+pluginstring/target/
