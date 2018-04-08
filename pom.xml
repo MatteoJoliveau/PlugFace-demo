@@ -7,45 +7,39 @@
     <groupId>org.plugface.demo</groupId>
     <artifactId>plugface-demo</artifactId>
     <packaging>pom</packaging>
-    <version>0.5.0</version>
+    <version>0.6.0-SNAPSHOT</version>
     <modules>
-        <module>demoapp</module>
-        <module>pluginarithmetic</module>
-        <module>pluginstring</module>
-        <module>plugincoordinator</module>
-        <module>appsdk</module>
+        <module>demo-app</module>
+        <module>app-sdk</module>
+        <module>math-plugin</module>
+        <module>greeter-plugin</module>
     </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.plugface.demo</groupId>
-                <artifactId>plugin-arithmetic</artifactId>
-                <version>${version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.plugface.demo</groupId>
-                <artifactId>plugin-string</artifactId>
-                <version>${version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.plugface.demo</groupId>
                 <artifactId>app-sdk</artifactId>
-                <version>${version}</version>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.plugface</groupId>
+                <artifactId>plugface-spring</artifactId>
+                <version>0.6.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>20.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.plugface</groupId>
-            <artifactId>plugface-core</artifactId>
-            <version>0.6.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>20.0</version>
-        </dependency>
-    </dependencies>
 </project>
